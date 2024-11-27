@@ -12,7 +12,8 @@ module.exports = {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        firaGo: ['var(--font-firaGo)']
+        firaGo: ['var(--font-firaGo)'],
+        bpg: ['var(--font-bpg)']
       }
     },
   },

@@ -18,5 +18,20 @@ export const firaGo = localFont({
             path: "../../fonts/firago-700.ttf",
             weight: "700"
         },
-    ]
+    ],
+    variable: "--font-firaGo"
 })
+
+export const bpg = localFont({
+    src: [
+        {
+            path: '../../fonts/bpg-nino-mtavruli-webfont.ttf',
+            weight: '400'
+        },
+        {
+          path: '../../fonts/bpg_nino_mtavruli_bold.ttf',
+          weight: '600'
+        }
+    ],
+    variable: "--font-bpg"
+  })

@@ -3,38 +3,11 @@ import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 
-import localFont from "next/font/local";
+import { firaGo, bpg } from './_lib/fonts';
 import "./globals.css";
-
-// import { firaGo } from './_lib/fonts';
 
 import Header from './_components/header';
 import Footer from './_components/footer';
-
-const geistSans = localFont({
-  src: "../fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "../fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
-// const firaGo = localFont({
-//   src: "../fonts/firago-300.ttf",
-//   variable: "--font-firaGo",
-//   weight: '300'
-// })
-const firaGo = localFont({
-  src: [
-    {
-      path: "../fonts/firago-300.ttf",
-      variable: "--font-firaGo",
-      weight: "300"
-    }
-  ]
-})
 
 export const metadata = {
   title: "Create Next App",
@@ -58,7 +31,7 @@ export default async function LocaleLayout({
     <html lang={locale}>
       <body
         // className={`${geistSans.variable} ${geistMono.variable} ${firaGo.variable} antialiased`}
-        className={`${firaGo.variable} antialiased`}
+        className={`${firaGo.variable} ${bpg.variable} font-firaGo font-light antialiased`}
       >
         <NextIntlClientProvider messages={messages}>
           <Header locale={locale} />

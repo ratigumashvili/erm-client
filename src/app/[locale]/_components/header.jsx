@@ -33,9 +33,9 @@ function DesktopNavigation () {
     const t = useTranslations("Navbar")
 
     return (
-        <ul className="flex gap-4">
+        <ul className="flex gap-4 font-bpg font-normal uppercase">
             {NAVIGATION.map((item) => (
-                <li key={item.id} className="font-firaGo">
+                <li key={item.id}>
                     <Link href={`${item.path}`}>{t(item.title)}</Link>
                 </li>
             ))}
