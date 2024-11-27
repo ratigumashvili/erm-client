@@ -1,5 +1,12 @@
 {
-    "HomePage": {
-      "title": "ქართული ტექსტი"
-    }
+  "Navbar": {
+    "home": "მთავარი",
+    "about": "შესახებ",
+    "personnel": "პერსონალი",
+    "publications": "პუბლიკაციები",
+    "contacts": "კონტაქტი"
+  },
+  "HomePage": {
+    "title": "ქართული ტექსტი"
   }
+}

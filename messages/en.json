@@ -1,4 +1,11 @@
 {
+  "Navbar": {
+    "home": "Home",
+    "about": "About",
+    "personnel": "Personnel",
+    "publications": "Publications",
+    "contacts": "Contacts"
+  },
     "HomePage": {
       "title": "English text"
     }

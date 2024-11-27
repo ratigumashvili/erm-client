@@ -5,7 +5,11 @@ import { routing } from '@/i18n/routing';
 
 import localFont from "next/font/local";
 import "./globals.css";
+
+// import { firaGo } from './_lib/fonts';
+
 import Header from './_components/header';
+import Footer from './_components/footer';
 
 const geistSans = localFont({
   src: "../fonts/GeistVF.woff",
@@ -17,6 +21,20 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
+// const firaGo = localFont({
+//   src: "../fonts/firago-300.ttf",
+//   variable: "--font-firaGo",
+//   weight: '300'
+// })
+const firaGo = localFont({
+  src: [
+    {
+      path: "../fonts/firago-300.ttf",
+      variable: "--font-firaGo",
+      weight: "300"
+    }
+  ]
+})
 
 export const metadata = {
   title: "Create Next App",
@@ -28,7 +46,7 @@ export default async function LocaleLayout({
   params
 }) {
 
-  const {locale} = await params
+  const { locale } = await params
 
   if (!routing.locales.includes(locale)) {
     notFound();
@@ -39,11 +57,15 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        // className={`${geistSans.variable} ${geistMono.variable} ${firaGo.variable} antialiased`}
+        className={`${firaGo.variable} antialiased`}
       >
         <NextIntlClientProvider messages={messages}>
           <Header locale={locale} />
-          <main>{children}</main>
+          <main>
+            {children}
+          </main>
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>
