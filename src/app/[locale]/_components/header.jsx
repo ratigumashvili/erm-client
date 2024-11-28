@@ -10,8 +10,7 @@ import { useTranslations } from "next-intl"
 import { AlignJustify, ChevronsRight, X } from "lucide-react"
 
 import { NAVIGATION } from "../_lib/constants"
-import { setActive } from "../_lib/helpers"
-import { cn } from "../_lib/utlis"
+import { setActive, cn } from "../_lib/helpers"
 
 function LanguageSwitcher({ locale }) {
 
@@ -57,7 +56,7 @@ function DesktopNavigation() {
 
 function MobileNavigation() {
 
-    const [open, setIsOpen] = useState(true)
+    const [open, setIsOpen] = useState(false)
 
     const router = useRouter()
     const pathname = usePathname()
@@ -79,8 +78,8 @@ function MobileNavigation() {
             </button>
 
             <div className={cn(
-                "bg-slate-100 h-[calc(100vh-160px)] w-full absolute top-[160px] transition-all ease-in-out",
-                open ? "-right-0" : "-right-[100%]"
+                "bg-slate-100 h-[calc(100vh-160px)] w-full absolute top-[160px] left-0 transition-all ease-in-out",
+                open ? "opacity-100 z-10" : "opacity-0 -z-10"
             )}>
                 <div className="container flex flex-col gap-4 items-start py-8">
                     {NAVIGATION.map((item) => (

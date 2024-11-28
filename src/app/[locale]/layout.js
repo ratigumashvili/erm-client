@@ -26,7 +26,7 @@ export default async function LocaleLayout({ children, params }) {
 
   return (
     <html lang={locale}>
-      <body className={`${firaGo.variable} ${bpg.variable} font-firaGo font-light antialiased flex flex-col`}>
+      <body className={`${firaGo.variable} ${bpg.variable} font-firaGo font-light antialiased flex flex-col over`}>
         <NextIntlClientProvider messages={messages}>
           <Header locale={locale} />
           <main className="container py-8">

@@ -21,6 +21,11 @@ export const NAVIGATION = [
     },
     {
         id: 5,
+        title: "conference",
+        path: "/conference"
+    },
+    {
+        id: 6,
         title: "contacts",
         path: "/contacts"
     }
