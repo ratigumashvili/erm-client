@@ -1,10 +1,18 @@
 {
+  "Header": {
+    "isu_title": "ISU",
+    "isu_url": "https://iliauni.edu.ge/en/"
+  },
   "Navbar": {
     "home": "Home",
     "about": "About",
     "personnel": "Personnel",
     "publications": "Publications",
     "contacts": "Contacts"
+  },
+  "Footer": {
+    "isu_title": "Ilia State University",
+    "isu_url": "https://iliauni.edu.ge/en/"
   },
     "HomePage": {
       "title": "English text"

@@ -1,10 +1,18 @@
 {
+  "Header": {
+    "isu_title": "ილიაუნი",
+    "isu_url": "https://iliauni.edu.ge/ge"
+  },
   "Navbar": {
     "home": "მთავარი",
     "about": "შესახებ",
     "personnel": "პერსონალი",
     "publications": "პუბლიკაციები",
     "contacts": "კონტაქტი"
+  },
+  "Footer": {
+    "isu_title": "ილიას სახელმწიფო უნივერსიტეტი",
+    "isu_url": "https://iliauni.edu.ge/ge"
   },
   "HomePage": {
     "title": "ქართული ტექსტი"
