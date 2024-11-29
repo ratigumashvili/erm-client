@@ -1,5 +1,9 @@
+import NothingFound from "../_components/nothing-found";
+
 export default function CatchAllPage() {
   return (
-    <div>Nothin found</div>
+    <section>
+      <NothingFound />
+    </section>
   )
 }

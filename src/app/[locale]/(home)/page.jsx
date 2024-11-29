@@ -1,12 +1,19 @@
-import { useTranslations } from 'next-intl';
+import PageTitle from "../_components/page-title";
+import NothingFound from "../_components/nothing-found";
 
-export default function Home() {
-  
-  const t = useTranslations("HomePage")
-  
+import { getSinglePage } from "../_lib/apiCalls";
+
+export default async function Home({ params }) {
+
+  const { locale } = await params
+
+  const { data } = await getSinglePage('home', locale)
+
+  if(!data) return <NothingFound />
+
   return (
-    <div>
-      <h1>{t('title')}</h1>
-    </div>
+    <section>
+      <PageTitle>{data.pageTitle}</PageTitle>
+    </section>
   );
 }

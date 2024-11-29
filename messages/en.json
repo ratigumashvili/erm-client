@@ -15,7 +15,9 @@
     "isu_title": "Ilia State University",
     "isu_url": "https://iliauni.edu.ge/en/"
   },
-    "HomePage": {
-      "title": "English text"
-    }
+  "NothingFound": {
+    "title": "Oops! Something went wrong",
+    "subtitle": "Could not find requested page",
+    "cta": "Return Home"
   }
+}

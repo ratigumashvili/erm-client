@@ -2,6 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 
 import PageTitle from "../_components/page-title"
+import NothingFound from "../_components/nothing-found"
 
 import { getSinglePage } from "../_lib/apiCalls"
 
@@ -11,7 +12,7 @@ export default async function Conference({ params }) {
 
   const { data } = await getSinglePage('conference', locale, "populate[conference][populate][banner][fields][0]=url&populate[conference][populate][banner][fields][1]=alternativeText")
 
-  if (!data) return "nothing found"
+  if (!data) return <NothingFound />
 
   return (
     <section>
