@@ -11,7 +11,7 @@ export default async function Personnel({ params }) {
   if (!data) return "nothing found"
 
   return (
-    <div>
+    <section>
       <PageTitle>{data.pageTitle}</PageTitle>
 
       {data.employee.map((stuff) => (
@@ -28,6 +28,6 @@ export default async function Personnel({ params }) {
         </div>
       ))}
 
-    </div>
+    </section>
   )
 }
