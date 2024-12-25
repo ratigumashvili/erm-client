@@ -6,6 +6,18 @@ import NothingFound from "../_components/nothing-found"
 
 import { getSinglePage } from "../_lib/apiCalls"
 
+export async function generateMetadata({ params }) {
+  
+  const { locale } = await params
+  
+  const { data } = await getSinglePage('conference', locale)
+  
+  return {
+    title: data?.pageTitle,
+    description: "..."
+  }
+}
+
 export default async function Conference({ params }) {
 
   const { locale } = await params

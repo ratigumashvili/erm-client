@@ -2,7 +2,13 @@ import PageTitle from "../_components/page-title"
 import MarkDownContent from "../_components/markdown-content"
 import NothingFound from "../_components/nothing-found"
 
-import { getSinglePage } from "../_lib/apiCalls"
+import { getMetaData, getSinglePage } from "../_lib/apiCalls"
+
+export async function generateMetadata ({params}) {
+  const {locale} = await params
+  const {data} = await getMetaData('about', locale)
+  console.log("meta: ", data)
+}
 
 export default async function About({ params }) {
 

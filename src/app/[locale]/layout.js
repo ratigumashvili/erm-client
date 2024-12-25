@@ -5,10 +5,11 @@ import { routing } from '@/i18n/routing';
 
 import { firaGo, bpg } from './_lib/fonts';
 import { getSinglePage } from './_lib/apiCalls';
-import "./globals.css";
 
 import Header from './_components/header';
 import Footer from './_components/footer';
+
+import "./globals.css";
 
 export async function generateMetadata({ params }) {
 
@@ -17,7 +18,10 @@ export async function generateMetadata({ params }) {
   const { data } = await getSinglePage('home', locale, 'populate[seo][populate][metaImage][fields][0]=url')
 
   return {
-    title: data?.seo?.metaTitle,
+    title: {
+      template: `%s | ${data?.seo?.metaTitle}`,
+      default: data?.seo?.metaTitle,
+    },
     description: data?.seo?.metaDescription,
     keywords: data?.seo?.metaKeywords,
     openGraph: {
