@@ -15,7 +15,9 @@ export default async function Publications({ params }) {
   return (
     <section>
       <PageTitle>{data.pageTitle}</PageTitle>
-      <MarkDownContent markdown={data.content} />
+      <div className="publications">
+        <MarkDownContent markdown={data.content} />
+      </div>
     </section>
   )
 }

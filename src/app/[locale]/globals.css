@@ -27,3 +27,8 @@ body {
 b, strong {
   font-weight: bold;
 }
+
+.publications li {
+  @apply relative mb-4
+  
+}

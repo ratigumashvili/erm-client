@@ -7,7 +7,6 @@ import { getMetaData, getSinglePage } from "../_lib/apiCalls"
 export async function generateMetadata ({params}) {
   const {locale} = await params
   const {data} = await getMetaData('about', locale)
-  console.log("meta: ", data)
 }
 
 export default async function About({ params }) {
