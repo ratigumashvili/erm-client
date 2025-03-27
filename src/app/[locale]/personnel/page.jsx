@@ -22,7 +22,12 @@ export default async function Personnel({ params }) {
             <div key={member.id} className="mb-2">
               <p>
                 {member.fullName}
-                {member?.position && <span className="italic"> - {member.position}</span>}
+                {member?.position && (
+                  <>
+                  <br />
+                  <span className="italic">{member.position}</span>
+                  </>
+                )}
               </p>
             </div>
           ))}
